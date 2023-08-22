@@ -6,7 +6,7 @@ function Layout() {
        
   return (
     <>
-          <div className='contaoner'>
+          <div className={styles.contaienr}>
               <main>
                   <Outlet />
               </main>
