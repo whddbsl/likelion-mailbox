@@ -1,4 +1,5 @@
 import Lion from '@/components/Lion';
+import Message from '@/components/Message';
 
 function Home() {
        
@@ -6,7 +7,7 @@ function Home() {
     <>
         <div>
               <Lion />
-              
+              <Message />
       </div>
     </>
   );
