@@ -1,12 +1,14 @@
-const { default: Layout } = require('@/layout/Layout');
-const { Route } = require('react-router-dom');
-const { createRoutesFromElements } = require('react-router-dom');
-const { createBrowserRouter } = require('react-router-dom');
+import Layout from '@/layout/Layout';
+import Home from '@/pages/home/Home';
+import { createBrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { createRoutesFromElements } from 'react-router-dom';
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<Layout />} >
-
+            <Route index element={<Home />} />
         </Route>
     )
 )

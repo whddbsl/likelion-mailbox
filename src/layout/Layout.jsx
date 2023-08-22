@@ -1,9 +1,16 @@
+import { Outlet } from 'react-router-dom';
+import styles from './Layout.module.css'
+
 
 function Layout() {
        
   return (
     <>
-      <div>Layout</div>
+          <div className='contaoner'>
+              <main>
+                  <Outlet />
+              </main>
+      </div>
     </>
   );
 }
