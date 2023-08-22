@@ -4,8 +4,9 @@ function Home() {
        
   return (
     <>
-          <div>
-              <Lion/>
+        <div>
+              <Lion />
+              
       </div>
     </>
   );
