@@ -18,11 +18,13 @@ function SelectEnvelope() {
             <button className="yesButton absolute w-[150px] h-[150px] right-[565px] bottom-[179px] z-10 bg-lionYellow rounded-full border-8 font-extrabold text-[40px] text-center border-lionBlack">
               좋아!
             </button>
-            <img
-              className="absolute w-[88px] h-[88px] right-[56px] bottom-[56px]"
-              src={backButton}
-              alt="뒤로가기"
-            />
+            <a href="">
+              <img
+                className="absolute w-[88px] h-[88px] right-[56px] bottom-[66px]"
+                src={backButton}
+                alt="뒤로가기"
+              />
+            </a>
           </div>
         </div>
       </div>
