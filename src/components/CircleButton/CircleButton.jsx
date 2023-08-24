@@ -6,8 +6,6 @@ function CircleButton({ type, circleButtonText, width, height }) {
     height: height || '189px',
   };
 
-  console.log(styles);
-
   return (
     <>
       <button

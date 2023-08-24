@@ -1,13 +1,12 @@
 import Lion from '@/components/Lion';
 import Message from '@/components/Message/Message';
-import styles from './Home.module.css';
 import CircleButton from '@/components/CircleButton/CircleButton';
 import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
-      <div className={styles.messageContainer}>
+      <div className="">
         <div>
           <Message />
         </div>
