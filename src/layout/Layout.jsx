@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom';
 function Layout() {
   return (
     <>
-      <div>
-        <main className="bg-primary w-screen h-screen">
+      <div className="flex h-screen justify-center pb-2 pt-2  items-center bg-primary">
+        <main>
           <Outlet />
         </main>
       </div>
