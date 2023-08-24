@@ -10,7 +10,7 @@ function SignIn() {
   return (
     <>
       <Lion />
-      <form className="">
+      <form className="w-[443px] h-[600px] bg-lionGray border-4 rounded-[20px]">
         <h2 className="">로그인</h2>
         <div className="">
           <div className="">
@@ -49,9 +49,8 @@ function SignIn() {
           width={'140px'}
           height={'140px'}
         />
-
-        <GoToBackButton />
       </form>
+      <GoToBackButton />
     </>
   );
 }
