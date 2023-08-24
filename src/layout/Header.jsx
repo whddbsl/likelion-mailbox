@@ -1,5 +1,6 @@
 import Lion from '@/components/Lion';
-import Arrow from '@/components/Arrow';
+// import Arrow from '@/components/Arrow';
+import GoToBackButton from '@/components/GoToBackButton';
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
         <h1 className="mr-4">움직이는 우표를 골라보세요!</h1>
         <p className="text-xl">(feat.GIFHY)</p>
       </div>
-      <Arrow />
+      <GoToBackButton />
     </header>
   );
 }
