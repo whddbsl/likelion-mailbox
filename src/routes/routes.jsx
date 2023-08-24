@@ -1,7 +1,7 @@
 import Layout from '@/layout/Layout';
 import Home from '@/pages/home/Home';
-import SignIn from '@/pages/signin/SignIn';
-import SiginUp from '@/pages/signup/SiginUp';
+import SignIn from '@/pages/SignIn';
+import SiginUp from '@/pages/SiginUp';
 import { createBrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import { createRoutesFromElements } from 'react-router-dom';
