@@ -1,5 +1,3 @@
-import styles from './CircleButton.module.css';
-
 function CircleButton({ type, circleButtonText, width, height }) {
   const circleButtonSize = {
     width: width || '189px',
@@ -9,11 +7,13 @@ function CircleButton({ type, circleButtonText, width, height }) {
   return (
     <>
       <button
-        className={styles.circleButton}
+        className="bg-lionYellow border-8 border-black rounded-full cursor-pointer"
         type={type}
         style={circleButtonSize}
       >
-        <span className={styles.circleButtonText}>{circleButtonText}</span>
+        <span className="font-extrabold text-center text-[2.5rem]">
+          {circleButtonText}
+        </span>
       </button>
     </>
   );

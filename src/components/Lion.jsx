@@ -1,4 +1,4 @@
-function Lion() {
+function Lion({ className }) {
   return (
     <>
       <svg
@@ -7,6 +7,7 @@ function Lion() {
         height="201"
         fill="none"
         viewBox="0 0 201 201"
+        className={className}
       >
         <path
           fill="#030302"

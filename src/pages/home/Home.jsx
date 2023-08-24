@@ -1,7 +1,7 @@
 import Lion from '@/components/Lion';
 import Message from '@/components/Message/Message';
 import styles from './Home.module.css';
-import CircleButton from '@/components/CircleButton/CircleButton';
+import CircleButton from '@/components/CircleButton';
 import { Link } from 'react-router-dom';
 
 function Home() {

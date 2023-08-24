@@ -11,6 +11,18 @@ export default {
       },
       backgroundImage: {
         hero: 'url("/cover2.jpg")',
+        message: 'url(/images/message.png)',
+      },
+      colors: {
+        primary: '#4a9944',
+        lionYellow: '#FFC63E',
+        lionGray: '#F5F5F5',
+        lionOrange: '#D76700',
+        inputYellow: '#FFE19A',
+        lionBlack: '#000',
+        lionBlue: '#0D77D8',
+        lionSecondOrange: '#FD983C',
+        lionWhite: '#FFF',
       },
     },
   },

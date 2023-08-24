@@ -1,6 +1,7 @@
 import Lion from '@/components/Lion';
 import { useId } from 'react';
-import CircleButton from '@/components/CircleButton/CircleButton';
+import CircleButton from '@/components/CircleButton';
+import GoToBackButton from '@/components/GoToBackButton';
 
 function SignIn() {
   const signInId = useId();
@@ -48,6 +49,8 @@ function SignIn() {
           width={'140px'}
           height={'140px'}
         />
+
+        <GoToBackButton />
       </form>
     </>
   );
