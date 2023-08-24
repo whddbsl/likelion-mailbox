@@ -6,7 +6,7 @@ function SelectEnvelope() {
     <>
       <div className="weatherWrapper relative w-[1280px] h-[832px] bg-primary px-[62px] py-[70px]">
         <div className="weatherTalk w-[1156px] h-[224px] bg-lionWhite rounded-[20px] px-[40px] py-[38px] font-extrabold text-[50px] text-center">
-          <p className="weatherTalk__degree mb-[36px]">
+          <p className="weatherTalk__degree">
             흠..오늘 기온은 <span className="text-lionOrange">29도</span> 네요!
           </p>
           <p className="weatherTalk__color">
