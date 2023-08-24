@@ -1,15 +1,22 @@
 import BackButton from "@/components/BackButton";
 import SpeechBubble from "@/components/MessageLion";
+import SelectPageButton from "@/components/SelectPageButton";
 
 function SelectPage() {
   return (
-    <div>
-      <SpeechBubble role="write" color="red" />
-      <SpeechBubble role="confirm" color="blue" />
-      <a href="" className=" top-10 right-[60px]">
+    <>
+      <div className="flex flex-col">
+        <SpeechBubble role="write" color="red" />
+        <SelectPageButton role="write" text="남겨볼래!" />
+      </div>
+      <div className="flex flex-col">
+        <SpeechBubble role="confirm" color="blue" />
+        <SelectPageButton role="read" text="확인해볼래!" />
+      </div>
+      <a href="" className="absolute top-10 right-[60px]">
         <BackButton />
       </a>
-    </div>
+    </>
   );
 }
 

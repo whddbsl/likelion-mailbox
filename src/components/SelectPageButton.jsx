@@ -1,4 +1,4 @@
-function SelectPageButton({ role }) {
+function SelectPageButton({ role, text }) {
   return (
     <>
       <button
@@ -7,7 +7,7 @@ function SelectPageButton({ role }) {
           role === "write" ? "bg-lionYellow" : "bg-lionBlue"
         }`}
       >
-        남겨볼래!
+        {text}
       </button>
     </>
   );

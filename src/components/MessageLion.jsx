@@ -1,6 +1,5 @@
 import BlueLion from "./BlueLion";
 import Lion from "@/components/Lion";
-import SelectPageButton from "./SelectPageButton";
 
 function MessageLion({ role, color }) {
   let lionText = "";
@@ -15,11 +14,11 @@ function MessageLion({ role, color }) {
     <div className="flex flex-col items-center ">
       <div className="flex flex-row items-center gap-6">
         <div>{color === "red" ? <Lion /> : <BlueLion />}</div>
+
         <div className="w-[678px] h-[170px] flex justify-center bg-[url('/speech_bubble.svg')] whitespace-pre-line">
           <p className="text-[40px] leading-normal self-center">{lionText}</p>
         </div>
       </div>
-      <SelectPageButton role="write" />
     </div>
   );
 }
