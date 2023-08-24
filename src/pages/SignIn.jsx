@@ -2,55 +2,40 @@ import Lion from '@/components/Lion';
 import { useId } from 'react';
 import CircleButton from '@/components/CircleButton';
 import GoToBackButton from '@/components/GoToBackButton';
+import FormContainer from '@/layout/FormContainer';
+import FormTitle from '@/components/FormTitle';
+import Input from '@/components/Input';
+import AccountActions from '@/components/AccountActions';
 
 function SignIn() {
-  const signInId = useId();
   const signInPassword = useId();
+  const signInId = useId();
 
   return (
     <>
-      <Lion />
-      <form className="w-[443px] h-[600px] bg-lionGray border-4 rounded-[20px]">
-        <h2 className="">로그인</h2>
-        <div className="">
-          <div className="">
-            <label htmlFor={signInId} className="">
-              아이디
-            </label>
-            <input
-              type="text"
-              id={signInId}
-              name={signInId}
-              className=""
-              placeholder="lion1234"
-            />
-          </div>
-        </div>
-        <div className="">
-          <label htmlFor={signInPassword} className="">
-            비밀번호
-          </label>
-          <input
-            type="password"
+      <GoToBackButton className={'absolute top-[80px] right-[120px]'} />
+
+      <FormContainer>
+        <Lion className={'absolute top-[370px]'} />
+        <FormTitle text="로그인" />
+        <div className="bg-lionWhite px-9 pt-7 rounded-[20px]">
+          <Input text="아이디" id={signInId} placeholderText="lion123" />
+
+          <Input
+            text="비밀번호"
             id={signInPassword}
-            name={signInPassword}
-            className=""
-            placeholder="*********"
+            placeholderText="*******"
           />
         </div>
-        <div className="">
-          <span>비밀번호를 잊어버렸나요 ?</span>
-          <span className="">회원가입</span>
-        </div>
-
+        <AccountActions />
         <CircleButton
-          type={'submit'}
-          circleButtonText={'확인'}
-          width={'140px'}
-          height={'140px'}
+          type="submit"
+          circleButtonText="확인"
+          width="140px"
+          height="140px"
+          borderWidth="border-4"
         />
-      </form>
-      <GoToBackButton />
+      </FormContainer>
     </>
   );
 }

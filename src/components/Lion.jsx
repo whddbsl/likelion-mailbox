@@ -1,4 +1,4 @@
-function Lion({ className, width, height }) {
+function Lion({ className, width = '200px', height = '200px' }) {
   return (
     <>
       <svg

@@ -1,4 +1,4 @@
-function CircleButton({ type, circleButtonText, width, height }) {
+function CircleButton({ type, circleButtonText, width, height, borderWidth }) {
   const circleButtonSize = {
     width: width || '189px',
     height: height || '189px',
@@ -7,7 +7,7 @@ function CircleButton({ type, circleButtonText, width, height }) {
   return (
     <>
       <button
-        className="bg-lionYellow border-8 border-black rounded-full cursor-pointer"
+        className={`bg-lionYellow ${borderWidth} border-black rounded-full cursor-pointer}`}
         type={type}
         style={circleButtonSize}
       >
