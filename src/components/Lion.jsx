@@ -1,10 +1,10 @@
-function Lion() {
+function Lion({ width = 200, height = 200 }) {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="201"
-        height="201"
+        width={width}
+        height={height}
         fill="none"
         viewBox="0 0 201 201"
       >

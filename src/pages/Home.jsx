@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <div>
-        <Lion />
+        <Lion width={400} height={400} />
       </div>
     </>
   );
