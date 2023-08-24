@@ -1,13 +1,12 @@
 import BackButton from "@/components/BackButton";
 import SpeechBubble from "@/components/SpeechBubble";
-import styles from "@/style/SelectPage.module.css";
 
 function SelectPage() {
   return (
     <div>
       <SpeechBubble role="write" color="red" />
       <SpeechBubble role="confirm" color="blue" />
-      <a href="" className={styles.backButton}>
+      <a href="" className="absolute top-4 right-4">
         <BackButton />
       </a>
     </div>

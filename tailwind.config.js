@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.jsx'],
+  content: ["./index.html", "./src/**/*.jsx"],
   theme: {
     extend: {
       fontFamily: {
-        suit: ['SUIT Variable'],
+        suit: ["SUIT Variable"],
       },
       backgroundImage: {
         hero: 'url("/cover2.jpg")',
+        speechBubble: 'url("/speech_bubble.svg")',
       },
     },
   },
