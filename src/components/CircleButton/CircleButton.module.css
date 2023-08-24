@@ -2,6 +2,7 @@
   background: var(--lion-yellow);
   border: 1px solid transparent;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .circleButtonText {

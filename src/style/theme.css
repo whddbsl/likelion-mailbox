@@ -1,5 +1,8 @@
 /* color themse */
 :root {
-    --lion-green : #4A9944;
-    --lion-yellow : #ffc63e;
+  --lion-green: #4a9944;
+  --lion-yellow: #ffc63e;
+  --lion-gray: #f5f5f5;
+  --lion-white: #fff;
+  --lion-yellow-input: #ffe19a;
 }

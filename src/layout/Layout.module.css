@@ -4,4 +4,5 @@
   background: var(--lion-green);
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
