@@ -1,5 +1,5 @@
 import Layout from '@/layout/Layout';
-import Home from '@/pages/home/Home';
+import Home from '@/pages/Home';
 import SignIn from '@/pages/SignIn';
 import SiginUp from '@/pages/SiginUp';
 import { createBrowserRouter } from 'react-router-dom';

@@ -2,10 +2,13 @@ import Lion from '@/components/Lion';
 import styles from './SignIn.module.css';
 import { useId } from 'react';
 import CircleButton from '@/components/CircleButton/CircleButton';
+import { pb } from '@/api/pocketbase';
 
 function SignIn() {
   const signInId = useId();
   const signInPassword = useId();
+
+  console.log(pb);
 
   return (
     <>

@@ -5,6 +5,9 @@ export default {
     extend: {
       fontFamily: {
         suit: ['SUIT Variable'],
+        nanumSquareNeo: ['NanumSquareNeo-Variable'],
+        pretendard: ['Pretendard-Regular'],
+        GmarketSansMedium: ['GmarketSansMedium'],
       },
       backgroundImage: {
         hero: 'url("/cover2.jpg")',
