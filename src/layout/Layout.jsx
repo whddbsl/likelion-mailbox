@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import styles from './Layout.module.css';
 
 function Layout() {
   return (
     <>
-      <div className={styles.contaienr}>
-        <main>
+      <div>
+        <main className="bg-primary w-screen h-screen">
           <Outlet />
         </main>
       </div>
