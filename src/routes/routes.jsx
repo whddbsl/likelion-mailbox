@@ -1,11 +1,12 @@
 import Layout from "@/layout/Layout";
-import Home from "@/pages/home/Home";
 import SignIn from "@/pages/SignIn";
 import SiginUp from "@/pages/SiginUp";
 import { createBrowserRouter } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { createRoutesFromElements } from "react-router-dom";
-import SelectPage from "@/pages/selectpages/SelectPage";
+import SelectPage from "@/pages/SelectPage";
+import Home from "@/pages/Home";
+import ShowCardList from "@/pages/ShowCardList";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path="signup" element={<SiginUp />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="selectpage" element={<SelectPage />} />
+      <Route path="showcardlist" element={<ShowCardList />} />
     </Route>,
   ),
 );
