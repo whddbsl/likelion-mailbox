@@ -1,15 +1,15 @@
-import { Outlet } from 'react-router-dom';
-import styles from './Layout.module.css'
-
+// import { Outlet } from "react-router-dom";
+import styles from "./Layout.module.css";
+import SelectPage from "@/pages/selectpage/SelectPage";
 
 function Layout() {
-       
   return (
     <>
-          <div className={styles.contaienr}>
-              <main>
-                  <Outlet />
-              </main>
+      <div className={styles.contaienr}>
+        {/* <main>
+          <Outlet />
+        </main> */}
+        <SelectPage />
       </div>
     </>
   );

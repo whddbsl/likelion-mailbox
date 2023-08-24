@@ -1,4 +1,5 @@
 pocketbase
+*.module.css
 
 # Logs
 logs
