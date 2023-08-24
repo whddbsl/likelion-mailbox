@@ -2,7 +2,7 @@ import BlueLion from "./BlueLion";
 import Lion from "@/components/Lion";
 import SelectPageButton from "./SelectPageButton";
 
-function SpeechBubble({ role, color }) {
+function MessageLion({ role, color }) {
   let lionText = "";
 
   if (role === "write") {
@@ -12,16 +12,16 @@ function SpeechBubble({ role, color }) {
   }
 
   return (
-    <div className="flex flex-col items-center relative">
+    <div className="flex flex-col items-center ">
       <div className="flex flex-row items-center gap-6">
         <div>{color === "red" ? <Lion /> : <BlueLion />}</div>
-        <div className="w-[678px] h-[170px] flex justify-center bg-[url('/public/speech_bubble.svg')] whitespace-pre-line">
+        <div className="w-[678px] h-[170px] flex justify-center bg-[url('/speech_bubble.svg')] whitespace-pre-line">
           <p className="text-[40px] leading-normal self-center">{lionText}</p>
         </div>
       </div>
-      <SelectPageButton role="write" />
+      <SelectPageButton role="read" />
     </div>
   );
 }
 
-export default SpeechBubble;
+export default MessageLion;

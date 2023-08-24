@@ -1,12 +1,12 @@
 import BackButton from "@/components/BackButton";
-import SpeechBubble from "@/components/SpeechBubble";
+import SpeechBubble from "@/components/MessageLion";
 
 function SelectPage() {
   return (
     <div>
       <SpeechBubble role="write" color="red" />
       <SpeechBubble role="confirm" color="blue" />
-      <a href="" className="absolute top-4 right-4">
+      <a href="" className=" top-10 right-[60px]">
         <BackButton />
       </a>
     </div>
