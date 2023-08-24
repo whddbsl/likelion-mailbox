@@ -5,7 +5,7 @@ import SelectPageButton from "@/components/SelectPageButton";
 function SelectPage() {
   return (
     <>
-      <div className="flex flex-col gap-[80px] justify-center items-center h-full  ">
+      <div className="flex flex-col gap-[80px] justify-center items-center h-full  bg-cyan-300">
         <div className="flex flex-col">
           <MessageLion role="write" color="red" />
           <SelectPageButton role="write" text="남겨볼래!" />
