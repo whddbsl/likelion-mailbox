@@ -5,6 +5,7 @@ import SiginUp from '@/pages/SiginUp';
 import { createBrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import { createRoutesFromElements } from 'react-router-dom';
+import SelectStamp from '@/pages/SelectStamp';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="signup" element={<SiginUp />} />
       <Route path="signin" element={<SignIn />} />
+      <Route path="gifhy" element={<SelectStamp />} />
     </Route>
   )
 );

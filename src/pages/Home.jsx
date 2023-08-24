@@ -13,6 +13,13 @@ function Home() {
           <CircleButton circleButtonText={'편지 쓰기'} type={'submit'} />
         </Link>
         <Lion className={'absolute top-[445px] right-[150px]'} />
+        <Lion />
+        <Link to="/signin">
+          <CircleButton circleButtonText={'편지 쓰기'} />
+        </Link>
+        <div>
+          <Lion width={400} height={400} />
+        </div>
       </div>
     </>
   );
