@@ -19,7 +19,7 @@ function MessageLion({ role, color }) {
           <p className="text-[40px] leading-normal self-center">{lionText}</p>
         </div>
       </div>
-      <SelectPageButton role="read" />
+      <SelectPageButton role="write" />
     </div>
   );
 }

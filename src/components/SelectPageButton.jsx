@@ -4,7 +4,7 @@ function SelectPageButton({ role }) {
       <button
         type="button"
         className={`w-[240px] h-[64px] text-[30px] font-bold self-end border-black border-4 rounded-[10px] ${
-          role === "write" ? "bg-[#FFC63E]" : "bg-[#0D77D8]"
+          role === "write" ? "bg-lionYellow" : "bg-lionBlue"
         }`}
       >
         남겨볼래!
