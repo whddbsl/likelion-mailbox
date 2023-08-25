@@ -1,5 +1,5 @@
 import SearchBar from "@/components/SearchBar"
-import SearchUsers from "@/components/SearchUsers"
+import SelectUser from "@/components/SelectUser"
 
 
 
@@ -8,7 +8,7 @@ function Selection() {
     <main className="w-[1280px] h-[832px]">
       {/* <Lion width={width} height={height} /> */}
       <SearchBar />
-      <SearchUsers />
+      <SelectUser />
     </main>
   )
 }
