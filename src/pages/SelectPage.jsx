@@ -9,7 +9,7 @@ function SelectPage() {
       <div className="flex flex-col gap-[80px] justify-center items-center h-full mr-10">
         <div className="flex flex-col items-end">
           <MessageLion role="write" color="red" />
-          <Link to="/">
+          <Link to="/selection">
             <SelectPageButton role="write" text="남겨볼래!" />
           </Link>
         </div>
