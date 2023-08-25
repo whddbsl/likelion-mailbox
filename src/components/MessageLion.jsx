@@ -13,7 +13,11 @@ function MessageLion({ role, color }) {
   return (
     <div className="flex flex-row items-center gap-6 mb-3">
       <div>
-        {color === "red" ? <Lion width={200} height={200} /> : <BlueLion />}
+        {color === "red" ? (
+          <Lion width={200} height={200} color="red" />
+        ) : (
+          <BlueLion />
+        )}
       </div>
 
       <div className="w-[678px] h-[170px] flex justify-center bg-[url('/speech_bubble.svg')] whitespace-pre-line">
