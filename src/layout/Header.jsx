@@ -5,7 +5,7 @@ function Header({ text }) {
   return (
     <header
       className=" bg-lionGray h-[100px] flex items-center
-    justify-between w-screen"
+    justify-between w-[1280px]"
     >
       <div className="flex items-center">
         <div className="my-3.5 ml-10 mr-4">
