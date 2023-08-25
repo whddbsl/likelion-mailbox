@@ -1,12 +1,13 @@
-function Lion() {
+function Lion({ className, width, height }) {
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="201"
-        height="201"
+        width={width}
+        height={height}
         fill="none"
         viewBox="0 0 201 201"
+        className={className}
       >
         <path
           fill="#030302"

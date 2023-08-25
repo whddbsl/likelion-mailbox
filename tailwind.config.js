@@ -5,8 +5,14 @@ export default {
     extend: {
       fontFamily: {
         suit: ['SUIT Variable'],
+        nanumSquareNeo: ['NanumSquareNeo-Variable'],
+        pretendard: ['Pretendard-Regular'],
+        GmarketSansMedium: ['GmarketSansMedium'],
       },
-      backgroundImage: {},
+      backgroundImage: {
+        hero: 'url("/cover2.jpg")',
+        message: 'url(/images/message.png)',
+      },
       colors: {
         primary: '#4a9944',
         lionYellow: '#FFC63E',
@@ -17,7 +23,6 @@ export default {
         lionBlue: '#0D77D8',
         lionSecondOrange: '#FD983C',
         lionWhite: '#FFF',
-        lionYellowInput: '#FFE19A',
       },
     },
   },
