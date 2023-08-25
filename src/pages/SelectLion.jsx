@@ -4,17 +4,19 @@ import Header from "@/layout/Header"
 
 
 
-function Selection() {
+function SelectLion() {
 
   const text = "어떤 사자에게 편지를 남겨볼까요?"
+  const lionColor = "red"
+  const arrowColor = "yellow"
 
   return (
     <main className="w-[1280px] h-[832px]">
-      <Header text={text}/>
+      <Header text={text} lionColor={lionColor} arrowColor={arrowColor}/>
       <SearchBar />
       <SelectUser />
     </main>
   )
 }
 
-export default Selection
+export default SelectLion
