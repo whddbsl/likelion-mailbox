@@ -1,6 +1,7 @@
 import useFetchData from "@/hooks/useFetchData";
 import UserList from "@/components/UserList";
 import { pb } from "@/api/pocketbase";
+import { Link } from "react-router-dom";
 
 // const record = await pb.collection('users').getFullList();
 // console.log(record)
@@ -8,33 +9,10 @@ import { pb } from "@/api/pocketbase";
 
 function SelectUser() {
   
-  const {data} = useFetchData(pb.collection('users'))
+  const {data} = useFetchData(pb.collection('users'));
 
   console.log(data);
 
-
-
-
-  // const { data } = useFetchData(pb);
-  // console.log(data);
-
-
-  // const { data, isLoading, error } = useFetchData(PB_PRODUCTS_ENDPOINT);
-
-  // 로딩 중인 경우 화면
-  // if (isLoading) {
-  //   return <Spinner size={160} title="데이터 가져오는 중이에요." />;
-  // }
-
-  // 오류가 발생한 경우 화면
-  // if (error) {
-  //   return (
-  //     <div role="alert">
-  //       <h2>{error.type}</h2>
-  //       <p>{error.message}</p>
-  //     </div>
-  //   );
-  // }
 
   // const listId = useId();
 
@@ -55,9 +33,11 @@ function SelectUser() {
       ))} */}
 
       {userList.map((key, i) => {
-        return <li key={key} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" onClick={handleSelectUser}>{userList[i]}</li>
-        }
-      )}
+        return (
+          <li key={key} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" onClick={handleSelectUser}>
+          <Link to={`/selectStemp`}>{userList[i]}</Link></li>
+        )
+      })}
     </ul>
   );
 }
