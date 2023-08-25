@@ -9,6 +9,7 @@ import SelectEnvelope from "@/pages/SelectEnvelope";
 import SelectPage from "@/pages/SelectPage";
 import Home from "@/pages/Home";
 import ShowCardList from "@/pages/ShowCardList";
+import SelectStamp from "@/pages/SelectStamp";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

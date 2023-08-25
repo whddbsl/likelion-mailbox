@@ -35,7 +35,7 @@ function SelectUser() {
       {userList.map((key, i) => {
         return (
           <li key={key} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" onClick={handleSelectUser}>
-          <Link to={`/selectStemp`}>{userList[i]}</Link></li>
+          <Link to={`/selectStamp`}>{userList[i]}</Link></li>
         )
       })}
     </ul>
