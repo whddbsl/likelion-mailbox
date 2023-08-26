@@ -1,4 +1,3 @@
-// import useMessageList from "@/hooks/useMessageList";
 import Envelope from "./Envelope";
 import useMessageList from "@/hooks/useMessageList";
 
