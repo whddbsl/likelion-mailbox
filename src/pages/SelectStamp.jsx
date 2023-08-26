@@ -2,6 +2,7 @@ import SearchBar from "@/components/SearchBar";
 import Header from "@/layout/header";
 import { useState } from "react";
 import { useEffect } from "react";
+import PocketBase from "pocketbase";
 
 function SelectStamp() {
   const [data, setData] = useState([]);
@@ -26,6 +27,19 @@ function SelectStamp() {
       })
       .catch((error) => console.log(error));
   }, [query]);
+
+  const handleClickConsole = (e) => {
+    console.log(e.target.src);
+  };
+
+  async function pocketbaseData() {
+    const pb = new PocketBase("https://likelion-mailbox.pockethost.io");
+
+    const resultList = await pb.collection("test_message").getList(1, 50, {
+      filter: 'created >= "2022-01-01 00:00:00" && someField1 != someField2',
+    });
+    console.log(resultList);
+  }
 
   // 공부기록
   //   fetch(URL)
@@ -55,6 +69,7 @@ function SelectStamp() {
                 alt="GIF"
                 width="300"
                 height="200"
+                onClick={pocketbaseData}
               />
             </div>
           ))}
