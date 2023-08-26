@@ -1,5 +1,5 @@
 import Lion from "@/components/Lion";
-import Arrow from "@/components/Arrow";
+import GoToBackButton from "@/components/GoToBackButton";
 
 function Header({ text }) {
   return (
@@ -16,7 +16,7 @@ function Header({ text }) {
         </div>
       </div>
       <div className=" mr-10">
-        <Arrow color="blue" />
+        <GoToBackButton fillColor="#0D77D8" />
       </div>
     </header>
   );

@@ -1,4 +1,4 @@
-import Arrow from "@/components/Arrow";
+import GoToBackButton from "@/components/GoToBackButton";
 import MessageLion from "@/components/MessageLion";
 import SelectPageButton from "@/components/SelectPageButton";
 import { Link } from "react-router-dom";
@@ -22,9 +22,9 @@ function SelectPage() {
         </div>
       </div>
 
-      <a href="" className="absolute top-10 right-[60px]">
-        <Arrow color="yellow" />
-      </a>
+      <div className="absolute top-10 right-[60px]">
+        <GoToBackButton color="yellow" />
+      </div>
     </>
   );
 }
