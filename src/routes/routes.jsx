@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="signup" element={<SiginUp />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="selection" element={<Selection />} />
-      <Route path="giphy" element={<SelectStamp />} />
+      <Route path="SelectStamp" element={<SelectStamp />} />
       <Route path="selectpage" element={<SelectPage />} />
       <Route path="showcardlist" element={<ShowCardList />} />
     </Route>,

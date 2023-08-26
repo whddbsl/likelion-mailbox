@@ -1,29 +1,64 @@
-import Header from '@/layout/header';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import SearchBar from "@/components/SearchBar";
+import Header from "@/layout/header";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function SelectStamp() {
-  const [giphy, setGiphy] = useState(null);
+  const [data, setData] = useState([]);
+  const [query, setQuery] = useState("cat");
+
+  const handleSearch = (searchValue) => {
+    setQuery(searchValue);
+  };
 
   useEffect(() => {
-    const key = import.meta.env.VITE_GIPHY_API_KEY;
-    const url = `https://api.giphy.com/v1/gifs/random?api_key=${key}&limit=1&q=`;
+    const KEY = import.meta.env.VITE_GIPHY_API_KEY;
+    const URL = `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${KEY}&limit=15`;
 
-    const getGiphyData = async () => {
-      const response = await fetch(url);
-      const data = await response.json();
+    fetch(URL)
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.data) {
+          setData(response.data);
+        } else {
+          console.log("Invalid data structure in API response");
+        }
+      })
+      .catch((error) => console.log(error));
+  }, [query]);
 
-      setGiphy(data);
-      console.log(giphy);
-    };
-    getGiphyData();
-    console.log(giphy);
-  }, []);
+  // 공부기록
+  //   fetch(URL)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     if (data) {
+  //       setData(data.data);
+  //       console.log(data.data);
+  //     }
+  //   })
+  //   .catch((error) => console.log(error));
+  // }, []);
 
   return (
     <>
-      <Header />
-      <div></div>
+      <Header text={"움직이는 우표를 골라보세요!"} featText={"(feat.GIPHY)"} />
+      <SearchBar
+        searchText={"GIF이미지 검색이 가능합니다! ex) cat"}
+        onSearch={handleSearch}
+      />
+      <div className="flex flex-wrap">
+        {data &&
+          data.map((item) => (
+            <div key={item.id} className="m-2">
+              <img
+                src={item.images.original.url}
+                alt="GIF"
+                width="300"
+                height="200"
+              />
+            </div>
+          ))}
+      </div>
     </>
   );
 }
