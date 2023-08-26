@@ -14,12 +14,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="selectenvelope" element={<SelectEnvelope />} />
       <Route path="signup" element={<SiginUp />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="selection" element={<Selection />} />
       <Route path="selectpage" element={<SelectPage />} />
       <Route path="showcardlist" element={<ShowCardList />} />
+      <Route path="selectenvelope" element={<SelectEnvelope />} />
     </Route>,
   ),
 );
