@@ -1,4 +1,4 @@
-function Lion({ className, width, height, lionColor = "red" }) {
+function Lion({ className, width, height, lionColor }) {
   return (
     <>
       <svg

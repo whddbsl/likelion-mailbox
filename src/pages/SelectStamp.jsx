@@ -3,6 +3,7 @@ import Header from "@/layout/header";
 import { useState } from "react";
 import { useEffect } from "react";
 import PocketBase from "pocketbase";
+import { toast } from "react-hot-toast";
 
 function SelectStamp() {
   const [data, setData] = useState([]);
@@ -14,7 +15,7 @@ function SelectStamp() {
 
   useEffect(() => {
     const KEY = import.meta.env.VITE_GIPHY_API_KEY;
-    const URL = `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${KEY}&limit=15`;
+    const URL = `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${KEY}&limit=16`;
 
     fetch(URL)
       .then((res) => res.json())
@@ -28,15 +29,25 @@ function SelectStamp() {
       .catch((error) => console.log(error));
   }, [query]);
 
-  const handleClickConsole = (e) => {
-    console.log(e.target.src);
-  };
+  const handleGifDataPatch = async (e) => {
+    const clickGIF = e.target.src;
 
-  async function pocketbaseData() {
+    const updatedData = {
+      gifStamp: clickGIF,
+    };
+
+    // 💡 updata에 임시 userID를 넣어놨습니다. 로그인시 userID를 가져오는 기능구현이 필요합니다!
     const pb = new PocketBase("https://likelion-mailbox.pockethost.io");
-    const record = await pb.collection("users").getOne("8lecpj8k95cwh2n");
-    console.log(record);
-  }
+    const record = await pb
+      .collection("test_message")
+      .update("mkk5rmyoplcj8o8", updatedData);
+    // const stampData = [...record];
+    if (record) {
+      toast.success("이미지 저장에 성공하였습니다! ✅");
+    } else {
+      toast.error("서버와의 통신에 문제가 발생하였습니다. ❌");
+    }
+  };
 
   // 공부기록
   //   fetch(URL)
@@ -57,16 +68,19 @@ function SelectStamp() {
         searchText={"GIF이미지 검색이 가능합니다! ex) cat"}
         onSearch={handleSearch}
       />
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {data &&
           data.map((item) => (
-            <div key={item.id} className="m-2">
+            <div
+              key={item.id}
+              className="m-2 flex justify-center border-2 border-solid rounded-md my-5"
+            >
               <img
                 src={item.images.original.url}
                 alt="GIF"
-                width="300"
-                height="200"
-                onClick={pocketbaseData}
+                width="180"
+                height="170"
+                onClick={handleGifDataPatch}
               />
             </div>
           ))}

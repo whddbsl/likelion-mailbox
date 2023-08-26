@@ -1,7 +1,7 @@
-import Lion from '@/components/Lion';
-import { useId } from 'react';
-import CircleButton from '@/components/CircleButton';
-import GoToBackButton from '@/components/GoToBackButton';
+import Lion from "@/components/Lion";
+import { useId } from "react";
+import CircleButton from "@/components/CircleButton";
+import GoToBackButton from "@/components/GoToBackButton";
 
 function SignIn() {
   const signInId = useId();
@@ -9,7 +9,7 @@ function SignIn() {
 
   return (
     <>
-      <Lion />
+      <Lion lionColor={"red"} />
       <form className="">
         <h2 className="">로그인</h2>
         <div className="">
@@ -44,10 +44,10 @@ function SignIn() {
         </div>
 
         <CircleButton
-          type={'submit'}
-          circleButtonText={'확인'}
-          width={'140px'}
-          height={'140px'}
+          type={"submit"}
+          circleButtonText={"확인"}
+          width={"140px"}
+          height={"140px"}
         />
 
         <GoToBackButton />
