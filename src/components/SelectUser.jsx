@@ -4,15 +4,14 @@ import { pb } from "@/api/pocketbase";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
+const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/users/records'
+// const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/test/records'
 
+// const authData = await pb.admins.authWithPassword('bomlang4211@gmail.com', 'likelion123!');
 
-// const record = await pb.collection('users').getFullList();
-// console.log(record)
-// console.log('pb', pb);
-
-// const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/users/records'
-const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/test/records'
-
+// console.log(pb.authStore.isValid);
+// console.log(pb.authStore.token);
+// console.log(pb.authStore.model.id);
 
 function SelectUser() {
   
