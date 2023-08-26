@@ -1,60 +1,37 @@
-import useFetchData from "@/hooks/useFetchData";
-import UserList from "@/components/UserList";
 import { pb } from "@/api/pocketbase";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-
-const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/users/records'
-// const endpoint = 'https://likelion-mailbox.pockethost.io/api/collections/test/records'
-
-// const authData = await pb.admins.authWithPassword('bomlang4211@gmail.com', 'likelion123!');
-
-// console.log(pb.authStore.isValid);
-// console.log(pb.authStore.token);
-// console.log(pb.authStore.model.id);
+import { useState } from "react";
 
 function SelectUser() {
+
   
-  const {data} = useFetchData(endpoint);
+  const [data, setData] = useState([]);
+  const [status, setStatus] = useState('pending');
 
+  async function getUserList() {
+    try {
+      setStatus('loading');
+      const getUserName = await pb.collection('test_users').getFullList();
+      setData(getUserName);
+      setStatus('success');
+    } catch (error) {
+      setStatus('error');
+    }
+  }
 
-  const userInform = data?.items.map((item) => (
-    console.log(item.id)
-  ))
-
-  console.log(userInform);
-  // const getUsers = () => {
-  //   return  pb.collection('test').getFullList();
-  // }
-  // console.log(getUsers());
-
-  // const {data} = useFetchData(pb.collection('users'));
-
-  // console.log(data);
-
-
-  // const listId = useId();
-
-  // const handleSelectUser = () => {
-  //   console.log('선택');
-  // }
-
-
-  const userList = Array(9)
-  .fill(1)
-  .map((n, i) => 100 * (i + 1));
-  // console.log(userList);
+  // getUserList 함수를 실행하여 데이터 가져오기
+  useEffect(() => {
+    getUserList();
+  }, []);
 
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
-      {/* {data.items?.map((item) => (
-        <UserList key={item.id} item={item} />
-      ))} */}
-
-      {userList.map((key, i) => {
+      {data.map((items, index) => {
         return (
-          <li key={key} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
-          <Link to="/selectenvelope">{userList[i]}</Link></li>
+          <li key={index} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
+            <Link to="/selectenvelope">{items.user_name}</Link>
+          </li>
         )
       })}
     </ul>

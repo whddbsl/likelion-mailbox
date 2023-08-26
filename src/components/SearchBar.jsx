@@ -13,7 +13,7 @@ function SearchBar() {
     setUserInput(e.target.value.toLowerCase())
   }, 300);
 
-  console.log(userInput);
+  // console.log(userInput);
 
   //# 검색버튼
   const handleSearch = () => {
