@@ -1,6 +1,6 @@
-import Lion from '@/components/Lion';
-import CircleButton from '@/components/CircleButton';
-import { Link } from 'react-router-dom';
+import Lion from "@/components/Lion";
+import CircleButton from "@/components/CircleButton";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -10,10 +10,10 @@ function Home() {
           멋쟁이사자가 된 동기들에게
         </span>
         <Link to="/signin">
-          <CircleButton circleButtonText={'편지 쓰기'} type={'submit'} />
+          <CircleButton circleButtonText={"편지 쓰기"} type={"submit"} />
         </Link>
         <Lion
-          className={'absolute top-[445px] right-[150px]'}
+          className={"absolute top-[445px] right-[150px]"}
           width={200}
           height={200}
         />
