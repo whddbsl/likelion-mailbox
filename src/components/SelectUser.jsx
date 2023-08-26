@@ -20,7 +20,6 @@ function SelectUser() {
     }
   }
 
-  // getUserList 함수를 실행하여 데이터 가져오기
   useEffect(() => {
     getUserList();
   }, []);
@@ -29,8 +28,13 @@ function SelectUser() {
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
       {data.map((items, index) => {
         return (
-          <li key={index} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
-            <Link to="/selectenvelope">{items.user_name}</Link>
+          <li 
+            key={index}
+            onClick={() => {window.location.href = "/selectenvelope"}} 
+            className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
+            <Link to="/selectenvelope">
+              {items.user_name}
+            </Link>
           </li>
         )
       })}
