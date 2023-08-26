@@ -34,11 +34,8 @@ function SelectStamp() {
 
   async function pocketbaseData() {
     const pb = new PocketBase("https://likelion-mailbox.pockethost.io");
-
-    const resultList = await pb.collection("test_message").getList(1, 50, {
-      filter: 'created >= "2022-01-01 00:00:00" && someField1 != someField2',
-    });
-    console.log(resultList);
+    const record = await pb.collection("users").getOne("8lecpj8k95cwh2n");
+    console.log(record);
   }
 
   // 공부기록
