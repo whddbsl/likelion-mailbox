@@ -1,5 +1,4 @@
 import BackButton from '@/components/BackButton';
-import Gif from '@/components/Gif';
 import MessageFrom from '@/components/MessageFrom';
 import MessageTo from '@/components/MessageTo';
 import WriteMessage from '@/components/WriteMessage';

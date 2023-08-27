@@ -1,5 +1,5 @@
 import SearchBar from "@/components/SearchBar";
-import Header from "@/layout/header";
+import Header from "@/layout/Header";
 import { useState } from "react";
 import { useEffect } from "react";
 import PocketBase from "pocketbase";
