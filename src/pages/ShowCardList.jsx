@@ -11,9 +11,7 @@ function ShowCardList() {
         fillColor={"#0D77D8"}
       />
       <div className="flex flex-row justify-center my-4">
-        <Link to="/">
-          <LetterList />
-        </Link>
+        <LetterList />
       </div>
     </>
   );

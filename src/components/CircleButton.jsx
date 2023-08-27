@@ -3,7 +3,7 @@ function CircleButton({
   circleButtonText,
   width,
   height,
-  handleCreateUser,
+  onClick,
   borderWidth,
 }) {
   const circleButtonSize = {
@@ -17,7 +17,7 @@ function CircleButton({
         className={`bg-lionYellow ${borderWidth} border-black rounded-full cursor-pointer}`}
         type={type}
         style={circleButtonSize}
-        onClick={handleCreateUser}
+        onClick={onClick}
       >
         <span className="font-extrabold text-center text-[2.5rem]">
           {circleButtonText}
