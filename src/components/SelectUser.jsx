@@ -1,36 +1,20 @@
-import { pb } from "@/api/pocketbase";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react";
+import GoToEnvelope from "./GoToEnvelope";
+import { useUserList } from "@/hooks/useUserList";
 
 function SelectUser() {
 
-  
-  const [data, setData] = useState([]);
-  const [status, setStatus] = useState('pending');
-
-  async function getUserList() {
-    try {
-      setStatus('loading');
-      const getUserName = await pb.collection('test_users').getFullList();
-      setData(getUserName);
-      setStatus('success');
-    } catch (error) {
-      setStatus('error');
-    }
-  }
-
-  // getUserList 함수를 실행하여 데이터 가져오기
-  useEffect(() => {
-    getUserList();
-  }, []);
+  const {data, status} = useUserList()
 
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
-      {data.map((items, index) => {
+      {data.map((item) => {
+        const keyId = item.id
+        const name = item.user_name
         return (
-          <li key={index} className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
-            <Link to="/selectenvelope">{items.user_name}</Link>
+          <li 
+            key={keyId}
+            className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow hover:bg-lionYellow hover:cursor-pointer" >
+              <GoToEnvelope name={name} keyId={keyId}/>
           </li>
         )
       })}
