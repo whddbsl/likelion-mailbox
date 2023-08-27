@@ -27,13 +27,13 @@ function SelectUser() {
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
       {data.map((item) => {
-        const key = item.id
+        const keyId = item.id
         const name = item.user_name
         return (
           <li 
-            key={key}
+            key={keyId}
             className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow hover:bg-lionYellow hover:cursor-pointer" >
-              <GoToEnvelope name={name} key={key}/>
+              <GoToEnvelope name={name} keyId={keyId}/>
           </li>
         )
       })}
