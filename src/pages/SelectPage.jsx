@@ -1,5 +1,4 @@
 import GoToBackButton from "@/components/GoToBackButton";
-import GoToBackButton from "@/components/GoToBackButton";
 import MessageLion from "@/components/MessageLion";
 import SelectPageButton from "@/components/SelectPageButton";
 import { Link } from "react-router-dom";
