@@ -63,7 +63,7 @@ function SelectStamp() {
 
   return (
     <>
-      <Header text={"움직이는 우표를 골라보세요!"} featText={"(feat.GIPHY)"} />
+      <Header text={"움직이는 우표를 골라보세요!"} featText={"(feat.GIPHY)"} lionColor={"red"} />
       <SearchBar
         searchText={"GIF이미지 검색이 가능합니다! ex) cat"}
         onSearch={handleSearch}
