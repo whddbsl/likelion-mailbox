@@ -1,6 +1,5 @@
 import LetterList from "@/components/LetterList";
 import Header from "@/layout/Header";
-import { Link } from "react-router-dom";
 
 function ShowCardList() {
   return (

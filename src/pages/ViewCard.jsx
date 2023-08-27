@@ -1,14 +1,13 @@
-import BackButton from "@/components/BackButton";
+
 import MessageTo from "@/components/MessageTo";
 import ReadMessage from "../components/ReadMessage";
 import Gif from "@/components/Gif";
 import MessageFrom from "@/components/MessageFrom";
 import useMessageList from "@/hooks/useMessageList";
+import GoToBackButton from "@/components/GoToBackButton";
 
 function ViewCard() {
   const { data } = useMessageList();
-  console.log(data?.items[0]);
-  console.log(data?.items[5]?.gifStamp);
 
   return (
     <div className="relative bg-white w-[1208px] h-[746px] my-11 mx-9 rounded-[20px]">
@@ -18,7 +17,8 @@ function ViewCard() {
         }
         toName={"종윤"}
       />
-      <BackButton
+      <GoToBackButton
+        fillColor="#0D77D8"
         className={
           'bg-[url("/lion_back.svg")] absolute w-[88px] h-[88px] top-[14px] right-[20px]'
         }
@@ -32,7 +32,7 @@ function ViewCard() {
         />
         <img className="ml-9 mt-9 h-[536px]" src="/Vector 2.png" alt="" />
         <div className="flex flex-col mt-9 ml-9 gap-[280px]">
-          <Gif gifStamp={data?.items[5]?.gifStamp} />
+          <Gif gifStamp={data?.items[0]?.gifStamp} />
           <MessageFrom
             className={"text-[36px] mt-[22px]"}
             fromName={data?.items[0].fromId}

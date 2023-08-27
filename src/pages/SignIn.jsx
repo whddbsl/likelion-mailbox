@@ -22,6 +22,7 @@ const initalValue = {
 
 function SignIn() {
   const navigate = useNavigate();
+  const { signIn, isAuth, user } = useAuth();
 
   const { formState, handleChange } = useInputState(initalValue);
 
