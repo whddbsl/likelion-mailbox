@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function GoToBackButton({
-  fillColor = '#FFC63E',
-  className = 'cursor-pointer bg-transparent p-5',
+  fillColor = "#FFC63E",
+  className = "cursor-pointer bg-transparent p-5",
 }) {
   const navigate = useNavigate();
   const handleBack = () => {
