@@ -1,4 +1,4 @@
-import BackButton from '@/components/BackButton';
+import GoToBackButton from '@/components/GoToBackButton';
 import MessageFrom from '@/components/MessageFrom';
 import MessageTo from '@/components/MessageTo';
 import WriteMessage from '@/components/WriteMessage';
@@ -12,7 +12,7 @@ function WriteCard() {
         }
               toName={'종윤'}
       />
-      <BackButton
+      <GoToBackButton
         className={
           'bg-[url("/lion_back.svg")] absolute w-[88px] h-[88px] top-[14px] right-[20px]'
         }

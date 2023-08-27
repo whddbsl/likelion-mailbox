@@ -1,9 +1,10 @@
-import BackButton from "@/components/BackButton";
+
 import MessageTo from "@/components/MessageTo";
 import ReadMessage from "../components/ReadMessage";
 import Gif from "@/components/Gif";
 import MessageFrom from "@/components/MessageFrom";
 import useMessageList from "@/hooks/useMessageList";
+import GoToBackButton from "@/components/GoToBackButton";
 
 function ViewCard() {
   const { data } = useMessageList();
@@ -16,7 +17,8 @@ function ViewCard() {
         }
         toName={"종윤"}
       />
-      <BackButton
+      <GoToBackButton
+        fillColor="#0D77D8"
         className={
           'bg-[url("/lion_back.svg")] absolute w-[88px] h-[88px] top-[14px] right-[20px]'
         }
