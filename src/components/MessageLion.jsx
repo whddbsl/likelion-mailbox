@@ -14,7 +14,7 @@ function MessageLion({ role, color }) {
     <div className="flex flex-row items-center gap-6 mb-3">
       <div>
         {color === "red" ? (
-          <Lion width={200} height={200} color="red" />
+          <Lion width={200} height={200} lionColor="red" />
         ) : (
           <BlueLion />
         )}

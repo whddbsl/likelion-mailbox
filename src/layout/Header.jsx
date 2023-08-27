@@ -1,22 +1,24 @@
 import Lion from "@/components/Lion";
+// import Arrow from '@/components/Arrow';
 import GoToBackButton from "@/components/GoToBackButton";
 
-function Header({ text }) {
+function Header({ text, fillColor, lionColor, featText }) {
   return (
     <header
       className=" bg-lionGray h-[100px] flex items-center
-    justify-between w-screen"
+    justify-around w-screen"
     >
       <div className="flex items-center">
         <div className="my-3.5 ml-10 mr-4">
-          <Lion width={85} height={85} color="blue" />
+          <Lion width={80} height={80} color={lionColor} />
         </div>
         <div className=" flex w-[870px] h-[50px] text-[40px] font-bold items-end">
-          <h1 className="mr-4 ">{text}</h1>
+          <h1 className="mr-4 text-bold text-4xl">{text}</h1>
+          <span className="text-xl flex items-center">{featText}</span>
         </div>
       </div>
-      <div className=" mr-10">
-        <GoToBackButton fillColor="#0D77D8" />
+      <div className="mr-14">
+        <GoToBackButton fillColor={fillColor} />
       </div>
     </header>
   );
