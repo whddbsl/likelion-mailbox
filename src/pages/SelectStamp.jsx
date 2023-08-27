@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import PocketBase from "pocketbase";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
+
 
 function SelectStamp() {
   const [data, setData] = useState([]);
@@ -79,13 +81,15 @@ function SelectStamp() {
               key={item.id}
               className="m-2 flex justify-center border-2 border-solid rounded-md my-5"
             >
-              <img
-                src={item.images.original.url}
-                alt="GIF"
-                width="180"
-                height="170"
-                onClick={handleGifDataPatch}
-              />
+              <Link to="/writecard">
+                <img
+                  src={item.images.original.url}
+                  alt="GIF"
+                  width="180"
+                  height="170"
+                  onClick={handleGifDataPatch}
+                />
+              </Link>
             </div>
           ))}
       </div>

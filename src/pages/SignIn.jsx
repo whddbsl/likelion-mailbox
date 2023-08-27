@@ -48,7 +48,7 @@ function SignIn() {
             <span>비밀번호를 잊어버렸나요 ?</span>
             <span className="">회원가입</span>
           </div>
-          <Link to="/writecard">
+          <Link to="/selectpage">
             <CircleButton
               type={"submit"}
               circleButtonText={"확인"}
