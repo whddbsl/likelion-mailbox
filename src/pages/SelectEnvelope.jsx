@@ -100,7 +100,7 @@ function SelectEnvelope() {
           </p>
           <div className="envelopeWrapper m-auto">
             <img className="m-auto" src={envelopeImage} alt="편지봉투" />
-            <Link to="/selectStamp">
+            <Link to="/selectpage">
               <button
                 className="yesButton absolute w-[150px] h-[150px] right-[565px] bottom-[185px] z-10 bg-lionYellow rounded-full border-8 font-extrabold text-[40px] text-center border-lionBlack"
                 onClick={handleEditEnvelope}
