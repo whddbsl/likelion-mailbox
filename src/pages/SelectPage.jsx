@@ -1,9 +1,12 @@
 import GoToBackButton from "@/components/GoToBackButton";
 import MessageLion from "@/components/MessageLion";
 import SelectPageButton from "@/components/SelectPageButton";
+import { useAuth } from "@/context/AuthContext";
 import { Link } from "react-router-dom";
 
 function SelectPage() {
+  const userValue = JSON.parse(localStorage.getItem("pocketbase_auth"));
+
   return (
     <>
       <div className="flex flex-col gap-[80px] justify-center items-center h-full mr-10">
