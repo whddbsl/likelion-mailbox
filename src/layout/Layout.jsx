@@ -1,10 +1,9 @@
-import { Outlet } from 'react-router-dom';
-import styles from './Layout.module.css';
+import { Outlet } from "react-router-dom";
 
 function Layout() {
   return (
     <>
-      <div className={styles.contaienr}>
+      <div className="flex h-screen bg-primary justify-center">
         <main>
           <Outlet />
         </main>

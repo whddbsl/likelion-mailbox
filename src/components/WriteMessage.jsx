@@ -1,17 +1,14 @@
-import SendButton from './SendButton';
+import SendButton from "./SendButton";
 
-function WriteMessage({className}) {
+function WriteMessage({ className }) {
   return (
     <>
-      <form action="" method="POST">
-        <textarea
-          className={className}
-          name="message"
-          cols="30"
-          rows="10"
-        ></textarea>
-        <SendButton />
-      </form>
+      <textarea
+        className={className}
+        cols="30"
+        rows="10"
+      ></textarea>
+      <SendButton />
     </>
   );
 }

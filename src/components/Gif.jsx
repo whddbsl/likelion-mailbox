@@ -1,7 +1,7 @@
-function Gif() {
+function Gif({ gifStamp }) {
   return (
     <>
-      <img className="bg-black w-[322px] h-[198px]" src="" alt="gif" />
+      <img className="w-[322px] h-[198px]" src={gifStamp} alt="gif" />
     </>
   );
 }
