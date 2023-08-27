@@ -22,9 +22,9 @@ function SelectPage() {
         </div>
       </div>
 
-      <a href="" className="absolute top-10 right-[60px]">
-        <GoToBackButton fillColor="#FFC63E" />
-      </a>
+      <div className="absolute top-10 right-[60px]">
+        <GoToBackButton color="yellow" />
+      </div>
     </>
   );
 }
