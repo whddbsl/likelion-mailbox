@@ -8,7 +8,6 @@ function Letter() {
   const { data } = useMessageList();
   let userId = data?.items[5];
   const [filteredItems, setFilteredItems] = useState([]);
-  console.log(userId);
 
   useEffect(() => {
     if (data) {
