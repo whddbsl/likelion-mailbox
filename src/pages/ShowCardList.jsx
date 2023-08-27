@@ -1,4 +1,4 @@
-import Letter from "@/components/ShowCardList";
+import LetterList from "@/components/LetterList";
 import Header from "@/layout/Header";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ function ShowCardList() {
       />
       <div className="flex flex-row justify-center my-4">
         <Link to="/">
-          <Letter />
+          <LetterList />
         </Link>
       </div>
     </>
