@@ -7,7 +7,6 @@ import Lion from "@/components/Lion";
 import { useAuth } from "@/context/AuthContext";
 import { useInputState } from "@/hooks/useInputState";
 import FormContainer from "@/layout/FormContainer";
-import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const inputFields = [
@@ -31,23 +30,17 @@ function SiginUp() {
   const { formState, handleChange } = useInputState(initalValue);
 
   const handleCreateUser = async () => {
-    // await signUp(formState);
-    await pb.collection("users").create({
-      ...formState,
-    });
-
+    await signUp(formState);
     alert(
       `${formState.username} (으)로 가입 되었습니다 로그인 페이지로 이동합니다 🐣!`,
     );
     navigate("/signin");
   };
 
-  console.log(formState);
-
   return (
     <>
       <GoToBackButton className={"absolute top-[80px] right-[120px]"} />
-      <FormContainer onSubmit={handleCreateUser}>
+      <FormContainer>
         <Lion className={"absolute top-[-130px]"} />
         <FormTitle text="회원가입" />
         <div className="bg-lionWhite px-9 pt-7 rounded-[20px] ">
@@ -65,11 +58,12 @@ function SiginUp() {
           })}
         </div>
         <CircleButton
-          type="submit"
+          type="button"
           circleButtonText="완료"
           width="140px"
           height="140px"
           borderWidth="border-4"
+          handleCreateUser={handleCreateUser}
         />
       </FormContainer>
     </>
