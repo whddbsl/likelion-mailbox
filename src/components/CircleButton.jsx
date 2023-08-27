@@ -15,7 +15,6 @@ function CircleButton({
 
   return (
     <>
-      <Link to='/selectpage'>
         <button
           className={`bg-lionYellow ${borderWidth} border-black rounded-full cursor-pointer}`}
           type={type}
@@ -26,7 +25,6 @@ function CircleButton({
             {circleButtonText}
           </span>
         </button>
-      </Link>
     </>
   );
 }

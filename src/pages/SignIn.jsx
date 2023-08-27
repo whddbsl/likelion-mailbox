@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { useInputState } from "@/hooks/useInputState";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   const signInPassword = useId();
@@ -52,14 +53,16 @@ function SignIn() {
           />
         </div>
         <AccountActions />
-        <CircleButton
-          type="submit"
-          circleButtonText="확인"
-          width="140px"
-          height="140px"
-          borderWidth="border-4"
-          handleSubmit={handleSubmit}
-        />
+        <Link to="/selectpage">
+          <CircleButton
+            type="submit"
+            circleButtonText="확인"
+            width="140px"
+            height="140px"
+            borderWidth="border-4"
+            handleSubmit={handleSubmit}
+          />
+        </Link>
       </FormContainer>
     </>
   );
