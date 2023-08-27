@@ -26,14 +26,14 @@ function SelectUser() {
 
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
-      {data.map((items, index) => {
+      {data.map((item) => {
         return (
           <li 
-            key={index}
+            key={item.id}
             onClick={() => {window.location.href = "/selectenvelope"}} 
             className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
             <Link to="/selectenvelope">
-              {items.user_name}
+              {item.user_name}
             </Link>
           </li>
         )
