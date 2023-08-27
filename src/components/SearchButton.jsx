@@ -1,20 +1,21 @@
+function SearchButton(searchInput) {
 
-function SearchButton(input) {
+  const handleSearch = () => {
+    console.log("searchInput");
+  }
 
+  const handleKeyPress = () => {
+      console.log("searchInput");
+  }
 
-const handleSearch = () => {
-  console.log(input);
-}
-
-
-  
   return (
   <div 
     role="button" 
     tabIndex={0}
     aria-labelledby="search"
     onClick={handleSearch}
-    className="outline-none">
+    onKeyDown={handleKeyPress}
+    >
     <img src="/search.svg" alt="검색" id="search"/>
   </div>
   )
