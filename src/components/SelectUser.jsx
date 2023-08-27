@@ -1,28 +1,9 @@
-import { pb } from "@/api/pocketbase";
-import { useEffect } from "react";
-import { useState } from "react";
 import GoToEnvelope from "./GoToEnvelope";
+import { useUserList } from "@/hooks/useUserList";
 
 function SelectUser() {
 
-  
-  const [data, setData] = useState([]);
-  const [status, setStatus] = useState('pending');
-
-  async function getUserList() {
-    try {
-      setStatus('loading');
-      const getUserName = await pb.collection('test_users').getFullList();
-      setData(getUserName);
-      setStatus('success');
-    } catch (error) {
-      setStatus('error');
-    }
-  }
-
-  useEffect(() => {
-    getUserList();
-  }, []);
+  const {data, status} = useUserList()
 
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
