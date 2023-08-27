@@ -11,6 +11,10 @@ function SignIn() {
   const signInPassword = useId();
   const signInId = useId();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <GoToBackButton className={'absolute top-[80px] right-[120px]'} />
@@ -34,6 +38,7 @@ function SignIn() {
           width="140px"
           height="140px"
           borderWidth="border-4"
+          handleSubmit={handleSubmit}
         />
       </FormContainer>
     </>

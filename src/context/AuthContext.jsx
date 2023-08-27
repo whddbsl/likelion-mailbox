@@ -1,4 +1,5 @@
 import { pb } from '@/api/pocketbase';
+import { useContext } from 'react';
 import { createContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -57,3 +58,12 @@ function AuthProvider({ displayName = 'Auth.Provider', children }) {
   );
 }
 export default AuthProvider;
+
+export const useAuth = () => {
+  const authValue = useContext(AuthContext);
+  if (!authValue) {
+    throw new Error('useAuth는 AuthProvider 내부에서만 사용 가능합니다');
+  }
+
+  return authValue;
+};
