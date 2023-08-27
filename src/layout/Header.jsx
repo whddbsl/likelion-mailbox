@@ -6,11 +6,11 @@ function Header({ text, fillColor, lionColor, featText }) {
   return (
     <header
       className=" bg-lionGray h-[100px] flex items-center
-    justify-around w-screen"
+    justify-around w-[1280px] mx-auto"
     >
       <div className="flex items-center">
         <div className="my-3.5 ml-10 mr-4">
-          <Lion width={80} height={80} color={lionColor} />
+          <Lion width={80} height={80} lionColor={lionColor} />
         </div>
         <div className=" flex w-[870px] h-[50px] text-[40px] font-bold items-end">
           <h1 className="mr-4 text-bold text-4xl">{text}</h1>
