@@ -9,7 +9,7 @@ function SelectPage() {
       <div className="flex flex-col gap-[80px] justify-center items-center h-full mr-10">
         <div className="flex flex-col items-end">
           <MessageLion role="write" color="red" />
-          <Link to="/selection">
+          <Link to="/selectLion">
             <SelectPageButton role="write" text="남겨볼래!" />
           </Link>
         </div>
@@ -22,9 +22,9 @@ function SelectPage() {
         </div>
       </div>
 
-      <a href="" className="absolute top-10 right-[60px]">
-        <GoToBackButton fillColor="#FFC63E" />
-      </a>
+      <div className="absolute top-10 right-[60px]">
+        <GoToBackButton color="yellow" />
+      </div>
     </>
   );
 }

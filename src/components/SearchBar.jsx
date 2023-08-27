@@ -1,40 +1,37 @@
 import debounce from "@/utils/debounce";
 import { useState } from "react";
 import { useId } from "react";
+import SearchButton from "./SearchButton";
 
-function SearchBar({ searchText, onSearch }) {
+function SearchBar() {
+  
   const searchId = useId();
-  const [userInput, setUserInput] = useState(null);
-
-  //# 검색창
+  const [searchInput, setUserInput] = useState("");
+  
+  // 검색창
   const handleChangeInput = debounce((e) => {
-    setUserInput(e.target.value.toLowerCase());
-    onSearch(e.target.value.toLowerCase());
+    setUserInput(e.target.value.toLowerCase())
   }, 300);
+
+  // 엔터 눌렀을 때 초기화 되지 않도록
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
-      <form className=" flex items-center justify-center py-10">
-        <label htmlFor={searchId} className="sr-only">
-          검색
-        </label>
-        <input
+      <form onSubmit={handleSubmit} className=" flex items-center justify-center py-10">
+        <label htmlFor={searchId} className="sr-only">검색</label>
+        <input 
           type="text"
           name="search"
           id={searchId}
-          defaultValue={userInput}
-          placeholder={searchText}
+          placeholder="   검색어를 입력하세요"
+          defaultValue={searchInput}
           onChange={handleChangeInput}
           className="w-[993px] h-[57px] rounded-[10px] border-2 border-solid border-lionBlack bg-lionWhite mr-2 outline-lionYellow"
         />
-        <div
-          role="button"
-          tabIndex={0}
-          aria-labelledby="search"
-          className="outline-none"
-        >
-          <img src="/search.svg" alt="검색" id="search" />
-        </div>
+        <SearchButton searchInput={searchInput}/>
       </form>
     </>
   );
