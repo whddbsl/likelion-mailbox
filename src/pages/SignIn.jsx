@@ -2,6 +2,8 @@ import Lion from "@/components/Lion";
 import { useId } from "react";
 import CircleButton from "@/components/CircleButton";
 import GoToBackButton from "@/components/GoToBackButton";
+import { Link } from 'react-router-dom';
+import WriteCard from './WriteCard';
 
 function SignIn() {
   const signInId = useId();
@@ -46,14 +48,14 @@ function SignIn() {
             <span>비밀번호를 잊어버렸나요 ?</span>
             <span className="">회원가입</span>
           </div>
-
-          <CircleButton
-            type={"submit"}
-            circleButtonText={"확인"}
-            width={"140px"}
-            height={"140px"}
-          />
-
+          <Link to="/writecard">
+            <CircleButton
+              type={"submit"}
+              circleButtonText={"확인"}
+              width={"140px"}
+              height={"140px"}
+            />
+          </Link>
           <div className="absolute top-10 right-[60px]">
             <GoToBackButton />
           </div>
