@@ -30,10 +30,11 @@ function SelectUser() {
         return (
           <li 
             key={item.id}
-            onClick={() => {window.location.href = "/selectenvelope"}} 
-            className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow flex justify-center items-center font-extrabold hover:bg-lionYellow hover:cursor-pointer" >
+            className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow hover:bg-lionYellow hover:cursor-pointer" >
             <Link to="/selectenvelope">
-              {item.user_name}
+              <div className="w-full h-full flex justify-center items-center font-extrabold">
+                {item.user_name}
+              </div>
             </Link>
           </li>
         )
