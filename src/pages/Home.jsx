@@ -18,11 +18,6 @@ function Home() {
           height={200}
           lionColor={"red"}
         />
-        <Lion
-          className={"absolute top-[445px] right-[150px]"}
-          width={200}
-          height={200}
-        />
       </div>
     </>
   );

@@ -6,13 +6,25 @@ import FormContainer from "@/layout/FormContainer";
 import FormTitle from "@/components/FormTitle";
 import Input from "@/components/Input";
 import AccountActions from "@/components/AccountActions";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { useInputState } from "@/hooks/useInputState";
+import { useEffect } from "react";
 
 function SignIn() {
   const signInPassword = useId();
   const signInId = useId();
+  const navigate = useNavigate();
+
+  const { isAuth, user, token } = useAuth();
+
+  const { formState: userValue, handleChange } = useInputState();
+
+  console.log(userValue);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate("/selectpage");
   };
 
   return (
@@ -20,15 +32,23 @@ function SignIn() {
       <GoToBackButton className={"absolute top-[80px] right-[120px]"} />
 
       <FormContainer>
-        <Lion className={"absolute top-[370px]"} />
+        <Lion className={"absolute top-[0]"} lionColor="red" />
         <FormTitle text="로그인" />
         <div className="bg-lionWhite px-9 pt-7 rounded-[20px]">
-          <Input text="아이디" id={signInId} placeholderText="lion123" />
+          <Input
+            text="이메일"
+            id={signInId}
+            placeholderText="lion123@naver.com"
+            // defaultValue={userValue.name}
+            onChange={handleChange}
+          />
 
           <Input
             text="비밀번호"
             id={signInPassword}
             placeholderText="*******"
+            // defaultValue={userValue.password}
+            onChange={handleChange}
           />
         </div>
         <AccountActions />

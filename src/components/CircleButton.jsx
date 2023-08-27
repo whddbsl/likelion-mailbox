@@ -3,12 +3,12 @@ function CircleButton({
   circleButtonText,
   width,
   height,
-  handleSubmit,
+  handleCreateUser,
   borderWidth,
 }) {
   const circleButtonSize = {
-    width: width || '189px',
-    height: height || '189px',
+    width: width || "189px",
+    height: height || "189px",
   };
 
   return (
@@ -17,7 +17,7 @@ function CircleButton({
         className={`bg-lionYellow ${borderWidth} border-black rounded-full cursor-pointer}`}
         type={type}
         style={circleButtonSize}
-        onSubmit={handleSubmit}
+        onClick={handleCreateUser}
       >
         <span className="font-extrabold text-center text-[2.5rem]">
           {circleButtonText}

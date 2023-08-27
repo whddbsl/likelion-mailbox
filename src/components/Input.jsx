@@ -1,4 +1,4 @@
-function Input({ id, placeholderText, text = '' }) {
+function Input({ id, placeholderText, text = "", defaultValue, onChange }) {
   return (
     <>
       <div className="flex pb-6 ">
@@ -9,8 +9,10 @@ function Input({ id, placeholderText, text = '' }) {
           type="text"
           id={id}
           name={id}
-          className="shrink-0 bg-inputYellow placeholder:pl-4
-              placeholder:text-black"
+          defaultValue={defaultValue}
+          onChange={onChange}
+          className="shrink-0 bg-inputYellow placeholder:pl-4 pl-4
+              placeholder:text-gray-400"
           placeholder={placeholderText}
         />
       </div>

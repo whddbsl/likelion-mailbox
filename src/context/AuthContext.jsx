@@ -1,18 +1,18 @@
-import { pb } from '@/api/pocketbase';
-import { useContext } from 'react';
-import { createContext } from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { pb } from "@/api/pocketbase";
+import { useContext } from "react";
+import { createContext } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const AuthContext = createContext();
 
 const initalAuthState = {
   isAuth: false,
   user: null,
-  token: '',
+  token: "",
 };
 
-function AuthProvider({ displayName = 'Auth.Provider', children }) {
+function AuthProvider({ displayName = "Auth.Provider", children }) {
   const [authState, setAuthState] = useState(initalAuthState);
 
   useEffect(() => {
@@ -29,18 +29,18 @@ function AuthProvider({ displayName = 'Auth.Provider', children }) {
   }, []);
 
   const signUp = async (registerUser) => {
-    return await pb.collection('users').create(registerUser);
+    return await pb.collection("test_users").create(registerUser);
   };
   const signIn = async (userNameOrEmail, password) => {
     return await pb
-      .collection('users')
+      .collection("users")
       .authWithPassword(userNameOrEmail, password);
   };
   const signOut = async () => {
-    return await pb.collection('users').clear();
+    return await pb.collection("users").clear();
   };
   const membershipWithdrawal = async (recordId) => {
-    return await pb.collection('users').delete(recordId);
+    return await pb.collection("users").delete(recordId);
   };
 
   const authValue = {
@@ -62,7 +62,7 @@ export default AuthProvider;
 export const useAuth = () => {
   const authValue = useContext(AuthContext);
   if (!authValue) {
-    throw new Error('useAuth는 AuthProvider 내부에서만 사용 가능합니다');
+    throw new Error("useAuth는 AuthProvider 내부에서만 사용 가능합니다");
   }
 
   return authValue;
