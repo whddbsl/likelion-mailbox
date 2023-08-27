@@ -1,7 +1,7 @@
 import { pb } from "@/api/pocketbase";
-import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
+import GoToEnvelope from "./GoToEnvelope";
 
 function SelectUser() {
 
@@ -27,15 +27,13 @@ function SelectUser() {
   return (
     <ul className="grid grid-cols-3 m-10 gap-y-5 justify-items-center items-center">
       {data.map((item) => {
+        const key = item.id
+        const name = item.user_name
         return (
           <li 
-            key={item.id}
+            key={key}
             className="w-[300px] h-[64px] rounded-[10px] bg-inputYellow hover:bg-lionYellow hover:cursor-pointer" >
-            <Link to="/selectenvelope">
-              <div className="w-full h-full flex justify-center items-center font-extrabold">
-                {item.user_name}
-              </div>
-            </Link>
+              <GoToEnvelope name={name} key={key}/>
           </li>
         )
       })}
