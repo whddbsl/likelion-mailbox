@@ -1,11 +1,11 @@
-import Lion from '@/components/Lion';
-import { useId } from 'react';
-import CircleButton from '@/components/CircleButton';
-import GoToBackButton from '@/components/GoToBackButton';
-import FormContainer from '@/layout/FormContainer';
-import FormTitle from '@/components/FormTitle';
-import Input from '@/components/Input';
-import AccountActions from '@/components/AccountActions';
+import Lion from "@/components/Lion";
+import { useId } from "react";
+import CircleButton from "@/components/CircleButton";
+import GoToBackButton from "@/components/GoToBackButton";
+import FormContainer from "@/layout/FormContainer";
+import FormTitle from "@/components/FormTitle";
+import Input from "@/components/Input";
+import AccountActions from "@/components/AccountActions";
 
 function SignIn() {
   const signInPassword = useId();
@@ -17,10 +17,10 @@ function SignIn() {
 
   return (
     <>
-      <GoToBackButton className={'absolute top-[80px] right-[120px]'} />
+      <GoToBackButton className={"absolute top-[80px] right-[120px]"} />
 
       <FormContainer>
-        <Lion className={'absolute top-[370px]'} />
+        <Lion className={"absolute top-[370px]"} />
         <FormTitle text="로그인" />
         <div className="bg-lionWhite px-9 pt-7 rounded-[20px]">
           <Input text="아이디" id={signInId} placeholderText="lion123" />
