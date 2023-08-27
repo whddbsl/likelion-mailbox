@@ -8,9 +8,13 @@ import ShowCardList from "@/pages/ShowCardList";
 import SiginUp from "@/pages/SiginUp";
 import SignIn from "@/pages/SignIn";
 
-import { Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import WriteCard from '../pages/WriteCard';
-import  ViewCard  from '@/pages/ViewCard';
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import WriteCard from "../pages/WriteCard";
+import ViewCard from "@/pages/ViewCard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

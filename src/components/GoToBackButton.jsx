@@ -1,6 +1,9 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-function GoToBackButton({ fillColor = '#FFC63E' }) {
+function GoToBackButton({
+  fillColor = "#FFC63E",
+  className = "cursor-pointer bg-transparent p-5",
+}) {
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1);
@@ -8,11 +11,7 @@ function GoToBackButton({ fillColor = '#FFC63E' }) {
 
   return (
     <>
-      <button
-        type="button"
-        className="cursor-pointer bg-transparent p-5"
-        onClick={handleBack}
-      >
+      <button type="button" className={className} onClick={handleBack}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="88"
