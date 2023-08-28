@@ -19,7 +19,7 @@ const initialEnvelopeState = {
 
 function SelectEnvelope() {
   const [weatherData, setWeatherData] = useState(null);
-  const { isLoading, data } = useMessageItem("mkk5rmyoplcj8o8");
+  const { isLoading, data } = useMessageItem("oxz95wlkj4qv1r4");
   const [envelopeState, setEnvelopeState] = useState(initialEnvelopeState);
 
   const updateMessage = useUpdateMessage();
@@ -40,7 +40,7 @@ function SelectEnvelope() {
   }, [isLoading, data]);
 
   const handleEditEnvelope = () => {
-    updateMessage("mkk5rmyoplcj8o8", envelopeState).catch((error) =>
+    updateMessage("oxz95wlkj4qv1r4", envelopeState).catch((error) =>
       console.error(error),
     );
   };

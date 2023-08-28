@@ -17,6 +17,7 @@ function Letter() {
     }
   }, [data]);
 
+
   return (
     <ul className="flex flex-wrap gap-4 max-w-[1280px] justify-between px-4">
       {filteredItems.map((item) => (

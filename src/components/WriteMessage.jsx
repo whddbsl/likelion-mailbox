@@ -10,7 +10,7 @@ function WriteMessage({ className }) {
   const [content, setContent] = useState(initialContent);
   const updateMessage = useUpdateMessage();
   const handleEditContent = () => {
-    updateMessage("mkk5rmyoplcj8o8", content).catch((error) =>
+    updateMessage("oxz95wlkj4qv1r4", content).catch((error) =>
       console.error(error),
     );
     
